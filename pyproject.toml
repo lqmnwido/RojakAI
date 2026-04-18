@@ -1,0 +1,40 @@
+[project]
+name = "rojakai"
+version = "0.1.0"
+description = "CLI Agent using Ollama"
+authors = [
+    {name = "lqmnwido", email = "47884472+lqmnwido@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0" 
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+typer = "^0.16.0"
+rich = "^14.0.0"
+prompt-toolkit = "^3.0.52"
+textual = "^3.7.0"
+requests = "^2.32.4"
+ollama = "^0.5.1"
+redis = "^6.2.0"
+psycopg2-binary = "^2.9.10"
+sqlalchemy = "^2.0.41"
+minio = "^7.2.16"
+qdrant-client = "^1.15.1"
+llama-index = "^0.12.43"
+python-dotenv = "^1.1.1"
+pydantic-settings = "^2.10.1"
+temporalio = "^1.14.0"
+GitPython = "^3.1.45"
+structlog = "^25.4.0"
+watchfiles = "^1.1.0"
+tree-sitter = "^0.25.0"
+sentence-transformers = "^4.1.0"
+
+[tool.poetry.scripts]
+agent = "app.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
